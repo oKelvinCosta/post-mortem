@@ -1,0 +1,11 @@
+
+
+/*Não pode usar !important na font face*/
+@font-face {
+    font-family: 'Brighton Bold';
+    src: url("brighton.ttf");
+}
+
+#resume p, #loja h2.title {
+    font-family: 'Brighton Bold' !important;
+}
