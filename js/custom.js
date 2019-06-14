@@ -17,11 +17,13 @@ window.onload = function () {
 
 
 
-// estado 1 video rodando
-// estado 2 pulou
-// estado 3 redimencionou para < 768px
+    // estado 1 video rodando
+    // estado 2 pulou
+    // estado 3 redimencionou para < 768px
 
     hideCall();
+
+
 
 
     pularI.onclick = function () {
@@ -100,7 +102,7 @@ window.onload = function () {
     };
 
 
-// Para mobile
+    // Para mobile
     if (window.innerWidth <= 768) {
         showCall();
         videoFundo.pause();
@@ -112,9 +114,29 @@ window.onload = function () {
         voltarI.style.pointerEvents = 'none';
 
     } else {
-        // Executa ao iniciar página no pc
-        videoFundo.play();
-        hideCall();
+
+        let promise = videoFundo.play();
+
+        if (promise !== undefined) {
+            promise.then(_ => {
+                // Play
+                hideCall();
+                console.log('bt');
+            }).catch(error => {
+                console.log('erro');
+
+                showCall();
+                videoFundo.pause();
+
+                pularI.style.opacity = '0';
+                pularI.style.pointerEvents = 'none';
+
+                voltarI.style.opacity = '0';
+                voltarI.style.pointerEvents = 'none';
+
+            });
+        }
+
     }
 
 
