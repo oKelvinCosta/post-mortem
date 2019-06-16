@@ -12,11 +12,11 @@ $.ajax({
 
         } else {
             // console.log(2);
-            // window.location.replace(urlGitHub);
+            window.location.replace(urlGitHub);
         }
     },
     error: (api) => {
         // console.log('erro ajax api');
-        // window.location.replace(urlGitHub);
+        window.location.replace(urlGitHub);
     }
 })
