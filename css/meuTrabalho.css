@@ -3,13 +3,17 @@
 
 
 
-#bg-ilustra{
+/* #bg-ilustra{
     background-position: top center !important;
     background-image: url('../img/meuTrabalho/Pedro_Ferreira_3_sobre.jpg') !important;
     background-size: cover;
+} */
+
+#bg-ilustra{
+    background-color: #1c1d1d;
 }
 
-@media screen and (max-width: 758px){
+/* @media screen and (max-width: 758px){
     #bg-ilustra {
         background-size: contain;
     }
@@ -30,7 +34,7 @@
 
 #sobre, #portfolio{
     z-index: 2;
-}
+} */
 
 
 

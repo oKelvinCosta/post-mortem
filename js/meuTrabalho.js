@@ -18,7 +18,7 @@ var btnAnimacao = q('#btnAnimacao');
 
 // Fire -------------------------------------
 
-if(window.innerWidth > 768){
+if (window.innerWidth > 768) {
     showIlu.style.opacity = '0';
     showIlu.style.pointerEvents = 'none';
     ilustracao.style.maxHeight = '100%';
