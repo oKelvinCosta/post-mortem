@@ -1,3 +1,17 @@
+v1.0.6
+
+-Concerto rezise video
+
+v1.0.5
+
+-...
+
+
+v1.0.4
+
+-Exlcusão da Mini Api, não funcionou
+
+
 v1.0.3
 
 -Background de meu-trabalho preto

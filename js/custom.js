@@ -65,8 +65,11 @@ window.onload = function () {
 
 
         } else {
-            // Roda o video e o video mutado
-            videoFundo.pause();
+            // Roda o video mutado
+            if (videoFundo.paused) {
+                playVideo(true);
+            }
+
             showCall();
 
         }
