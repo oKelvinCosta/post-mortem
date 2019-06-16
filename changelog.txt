@@ -1,3 +1,9 @@
+v1.0.2
+
+-Mini API para exportar uma variável dizendo que o site está no ar
+-Galeria do Instagram
+
+
 v1.0.1
 
-Video rodando automático ao abrir site no PC
+-Video rodando automático ao abrir site no PC

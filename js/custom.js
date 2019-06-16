@@ -121,9 +121,9 @@ window.onload = function () {
             promise.then(_ => {
                 // Play
                 hideCall();
-                console.log('bt');
+                console.log('promise then ok');
             }).catch(error => {
-                console.log('erro');
+                console.log('promise erro');
 
                 showCall();
                 videoFundo.pause();
