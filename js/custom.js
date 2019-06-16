@@ -9,6 +9,7 @@ var pularI;
 var voltarI;
 // 1 - video com som sem call
 // 2 - video sem som com call
+// 3 - deu rezise < 768 e precisa resetar para Play Intro
 var estado;
 
 
@@ -77,6 +78,8 @@ window.onload = function () {
             pularI.style.opacity = '0';
             pularI.style.pointerEvents = 'none';
 
+            estado = 3;
+
 
         } else {
             // Roda o video mutado
@@ -85,15 +88,20 @@ window.onload = function () {
             }
 
             // Mostra a call apenas se não estiver rodando video com som
-            if (estado === 2) {
+            if (estado === 2 || estado === 3) {
                 showCall();
+
+            } else {
+                voltarI.style.opacity = '0';
+                voltarI.style.pointerEvents = 'none';
+
+                pularI.style.opacity = '1';
+                pularI.style.pointerEvents = 'auto';
             }
 
-            voltarI.style.opacity = '1';
-            voltarI.style.pointerEvents = 'auto';
 
-            pularI.style.opacity = '0';
-            pularI.style.pointerEvents = 'none';
+
+
 
             console.log(estado);
 

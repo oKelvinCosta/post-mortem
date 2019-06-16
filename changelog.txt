@@ -1,3 +1,8 @@
+v1.0.8
+
+-Play introdução troca para Parar introdução ao dar resize
+
+
 v1.0.7
 
 -Ao mexer na tela pausa video e ao aumentar tela continua o video
