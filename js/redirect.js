@@ -8,15 +8,15 @@ $.ajax({
     sucess: (api) => {
         let json = JSON.parse(api);
         if (json.status === 200) {
-            console.log(1);
+            // console.log(1);
 
         } else {
-            console.log(2);
-            window.location.replace(urlGitHub);
+            // console.log(2);
+            // window.location.replace(urlGitHub);
         }
     },
     error: (api) => {
-        console.log('erro ajax api');
-        window.location.replace(urlGitHub);
+        // console.log('erro ajax api');
+        // window.location.replace(urlGitHub);
     }
 })

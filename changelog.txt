@@ -1,3 +1,11 @@
+v1.0.3
+
+-Background de meu-trabalho preto
+-Apenas Sobre e Instagram em meu-trabalho
+-Correção estilo da galeria instagram em meu-trabalho 
+-Video JS mudo ao entrar no site
+
+
 v1.0.2
 
 -Mini API para exportar uma variável dizendo que o site está no ar

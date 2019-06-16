@@ -11,7 +11,7 @@ jQuery(function ($) {
             if (api.meta.code === 200) {
                 let json = api.data;
 
-                console.log(json);
+                // console.log(json);
 
                 for (var i = 0; i < 6; i++) {
 
