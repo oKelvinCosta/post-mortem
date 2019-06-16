@@ -1,6 +1,13 @@
+v1.0.7
+
+-Ao mexer na tela pausa video e ao aumentar tela continua o video
+-Play e Voltar Instrodução
+
+
 v1.0.6
 
 -Concerto rezise video
+
 
 v1.0.5
 

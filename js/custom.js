@@ -3,8 +3,12 @@
 
 var videoFundo;
 
+// parar introdução
 var pularI;
+// play introdução
 var voltarI;
+// 1 - video com som sem call
+// 2 - video sem som com call
 var estado;
 
 
@@ -52,6 +56,10 @@ window.onload = function () {
         playVideo();
 
         estado = 1;
+
+        console.log(estado);
+
+
     };
 
 
@@ -63,14 +71,32 @@ window.onload = function () {
             videoFundo.pause();
             showCall();
 
+            voltarI.style.opacity = '0';
+            voltarI.style.pointerEvents = 'none';
+
+            pularI.style.opacity = '0';
+            pularI.style.pointerEvents = 'none';
+
 
         } else {
             // Roda o video mutado
             if (videoFundo.paused) {
-                playVideo(true);
+                playVideo(true, false);
             }
 
-            showCall();
+            // Mostra a call apenas se não estiver rodando video com som
+            if (estado === 2) {
+                showCall();
+            }
+
+            voltarI.style.opacity = '1';
+            voltarI.style.pointerEvents = 'auto';
+
+            pularI.style.opacity = '0';
+            pularI.style.pointerEvents = 'none';
+
+            console.log(estado);
+
 
         }
     };
@@ -108,12 +134,15 @@ function initialState() {
     videoFundo = q('#videoFundo');
     pularI = q('#pularIntro');
     voltarI = q('#voltarIntro');
-    estado = 1;
+    estado = 2;
     showCall();
 }
 
-function playVideo(muted = false) {
-    videoFundo.load();
+function playVideo(muted = false, reload = true) {
+    if (reload === true) {
+        videoFundo.load();
+    }
+
     videoFundo.muted = muted;
     let promise = videoFundo.play();
 
@@ -129,8 +158,6 @@ function playVideo(muted = false) {
             call.style.opacity = '1';
             voltarI.style.opacity = '0';
             voltarI.style.pointerEvents = 'none';
-
-            console.log('ruim');
 
             return;
 
